@@ -1,5 +1,6 @@
 import Laboratory02.Problem21.Address;
 import Laboratory02.Problem21.Customer;
+import Laboratory02.Problem22.Prog2;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +22,7 @@ public class Main {
                 System.out.println(c);
             }
         }
+        Prog2 prog2 = new Prog2();
+        prog2.Prog2_ToString();
     }
 }
