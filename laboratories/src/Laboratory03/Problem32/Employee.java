@@ -1,6 +1,4 @@
-package Laboratory03.Problem32.employeeinfo;
-
-import Laboratory03.Problem32.Account;
+package Laboratory03.Problem32;
 
 import java.time.LocalDate;
 import java.util.GregorianCalendar;

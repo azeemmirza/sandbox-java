@@ -1,8 +1,8 @@
 package Laboratory03;
 
-import Laboratory03.Problem32.employeeinfo.Employee;
+import Laboratory03.Problem32.Employee;
 
-public class Main {
+public class Laboratory03 {
     public static void main(String[] args) {
         // Create an Employee object
         Employee emp = new Employee("Helena Pedro", 2025, 5, 28);
