@@ -1,0 +1,11 @@
+Fundamentals Programming Practices - Laboratory Assignments
+
+This repository contains the laboratory assignments for the *Fundamentals of Programming Practices* course.
+Each assignment demonstrates various programming concepts, practices, and techniques covered throughout the course.
+The solutions and code for each lab exercise can be found in separate directories and files.
+
+
+LICENSE:
+This repository is licensed under the MIT License. See the LICENSE file for details.
+
+Copyrights (c) 2025
