@@ -28,16 +28,20 @@ public class Main {
         Prog2 prog2 = new Prog2();
         prog2.Prog2_ToString();
 
+        System.out.println("___________________________________________________________________");
+        System.out.println("//Prg3-4");
+        System.out.println("compute area for rectangle, circle and triangle");
+
         //Prg3-4
         //compute area for rectangle, circle and triangle
         Rectangle rectangle = new Rectangle(3,5);
-        System.out.printf("Area of Rectangle is: %.2f%n" , rectangle.getArea());
+        System.out.println(rectangle);
 
         Circle circle = new Circle(12);
-        System.out.printf("Area of Circle is: %.2f%n", circle.getArea());
+        System.out.println(circle);
 
         Triangle triangle = new Triangle(21,22);
-        System.out.printf("Area of Triangle is: %2f%n", triangle.getArea());
+        System.out.println(triangle);
 
 
 
