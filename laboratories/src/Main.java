@@ -1,6 +1,9 @@
 import Laboratory02.Problem21.Address;
 import Laboratory02.Problem21.Customer;
 import Laboratory02.Problem22.Prog2;
+import Laboratory03.Problem34.Circle;
+import Laboratory03.Problem34.Rectangle;
+import Laboratory03.Problem34.Triangle;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,5 +27,19 @@ public class Main {
         }
         Prog2 prog2 = new Prog2();
         prog2.Prog2_ToString();
+
+        //Prg3-4
+        //compute area for rectangle, circle and triangle
+        Rectangle rectangle = new Rectangle(3,5);
+        System.out.printf("Area of Rectangle is: %.2f%n" , rectangle.getArea());
+
+        Circle circle = new Circle(12);
+        System.out.printf("Area of Circle is: %.2f%n", circle.getArea());
+
+        Triangle triangle = new Triangle(21,22);
+        System.out.printf("Area of Triangle is: %2f%n", triangle.getArea());
+
+
+
     }
 }
