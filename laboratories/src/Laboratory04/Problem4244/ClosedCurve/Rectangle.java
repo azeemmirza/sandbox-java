@@ -1,6 +1,6 @@
-package Laboratory04.Problem42.ClosedCurve;
+package Laboratory04.Problem4244.ClosedCurve;
 
-public class Rectangle extends ClosedCurve {
+public class Rectangle extends ClosedCurve implements Polygon {
     private final double width;
     private final double length;
 
@@ -12,5 +12,15 @@ public class Rectangle extends ClosedCurve {
     @Override
     public double computeArea() {
         return this.length * this.width;
+    }
+
+    @Override
+    public int getNumberOfSides() {
+        return 0;
+    }
+
+    @Override
+    public double computePerimeter() {
+        return 0;
     }
 }

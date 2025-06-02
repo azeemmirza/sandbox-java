@@ -1,6 +1,6 @@
-package Laboratory04.Problem42;
+package Laboratory04.Problem4244;
 
-import Laboratory04.Problem42.ClosedCurve.*;
+import Laboratory04.Problem4244.ClosedCurve.*;
 
 public class Problem42 {
     public static void main(String[] args) {

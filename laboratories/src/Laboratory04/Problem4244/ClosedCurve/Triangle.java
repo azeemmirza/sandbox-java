@@ -1,8 +1,8 @@
-package Laboratory04.Problem42.ClosedCurve;
+package Laboratory04.Problem4244.ClosedCurve;
 
 import java.util.Arrays;
 
-public final class Triangle extends ClosedCurve {
+public final class Triangle extends ClosedCurve implements Polygon {
 	/** base and height variables are defined so that height <= base */
 	private final double base;
 	private final double height;
@@ -78,5 +78,15 @@ public final class Triangle extends ClosedCurve {
 
 	public double computeArea() {
 		return (0.5 * base * height);
+	}
+
+	@Override
+	public double computePerimeter() {
+		return 0;
+	}
+
+	@Override
+	public int getNumberOfSides() {
+		return 0;
 	}
 }

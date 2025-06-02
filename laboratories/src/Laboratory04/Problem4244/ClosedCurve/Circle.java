@@ -1,4 +1,4 @@
-package Laboratory04.Problem42.ClosedCurve;
+package Laboratory04.Problem4244.ClosedCurve;
 
 public final class Circle extends ClosedCurve {
 	private final double radius;
