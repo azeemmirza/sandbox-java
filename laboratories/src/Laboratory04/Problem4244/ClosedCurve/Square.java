@@ -13,11 +13,11 @@ public final class Square extends ClosedCurve implements Polygon {
 
 	@Override
 	public int getNumberOfSides() {
-		return 0;
+		return 4;
 	}
 
 	@Override
 	public double computePerimeter() {
-		return 0;
+		return 4 * this.side;
 	}
 }

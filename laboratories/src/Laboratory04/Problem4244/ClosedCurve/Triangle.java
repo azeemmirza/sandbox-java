@@ -82,11 +82,11 @@ public final class Triangle extends ClosedCurve implements Polygon {
 
 	@Override
 	public double computePerimeter() {
-		return 0;
+		return this.base + this.height;
 	}
 
 	@Override
 	public int getNumberOfSides() {
-		return 0;
+		return 3;
 	}
 }
