@@ -9,12 +9,12 @@ import Laboratory04.Problem43_47.employeeinfo.*;
 /**
  * For Program 4-7 Employee class adjustment.
  */
-public class Employee_47 implements Comparable<Employee> {
+public class Employee_47 implements Comparable<Employee_47> {
     private AccountList accounts;
     private String name;
     private LocalDate hireDate;
 
-    public Employee(String name, int yearOfHire, int monthOfHire, int dayOfHire) {
+    public Employee_47(String name, int yearOfHire, int monthOfHire, int dayOfHire) {
         this.name = name;
         this.hireDate = LocalDate.of(yearOfHire, monthOfHire, dayOfHire);
         this.accounts = new AccountList();
@@ -145,7 +145,7 @@ public class Employee_47 implements Comparable<Employee> {
      * 0 if they are equal.
      */
     @Override
-    public int compareTo(Employee other) {
+    public int compareTo(Employee_47 other) {
         if (other == null) {
             return 1; // Or throw NullPointerException, standard is to throw.
         }
