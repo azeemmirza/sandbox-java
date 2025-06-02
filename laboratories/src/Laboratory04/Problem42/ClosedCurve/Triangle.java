@@ -1,4 +1,4 @@
-package lesson7.lab7_2.closedcurve.good;
+package Laboratory04.Problem42.ClosedCurve;
 
 import java.util.Arrays;
 
@@ -75,6 +75,7 @@ public final class Triangle extends ClosedCurve {
 		assert(side1 <= side2 && side2 <= side3);
 		assert(height <= base);
 	}
+
 	public double computeArea() {
 		return (0.5 * base * height);
 	}
