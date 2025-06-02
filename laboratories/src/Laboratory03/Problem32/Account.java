@@ -1,4 +1,5 @@
 package Laboratory03.Problem32;
+
 public class Account {
     private static final int ID_LOWER = 1000;
     private static final int ID_UPPER = 9999;
