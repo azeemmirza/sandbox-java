@@ -1,4 +1,4 @@
-package Laboratory04.Problem43.employeeinfo;
+package Laboratory04.Problem43_47.employeeinfo;
 
 /**
  * Base class for different types of bank accounts.

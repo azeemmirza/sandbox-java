@@ -1,4 +1,4 @@
-package Laboratory04.Problem4244.ClosedCurve;
+package Laboratory04.Problem42_44.ClosedCurve;
 
 public class Rectangle extends ClosedCurve implements Polygon {
     private final double width;

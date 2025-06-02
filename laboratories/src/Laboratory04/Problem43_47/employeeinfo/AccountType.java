@@ -1,4 +1,4 @@
-package Laboratory04.Problem43.employeeinfo;
+package Laboratory04.Problem43_47.employeeinfo;
 
 /**
  * Enum to represent the different types of bank accounts.

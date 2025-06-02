@@ -1,10 +1,10 @@
-package Laboratory04.Problem43.employeeinfo;
+package Laboratory04.Problem43_47.employeeinfo;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import Laboratory04.Problem43.AccountList;
-import Laboratory04.Problem43.MyStringList;
+import Laboratory04.Problem43_47.AccountList;
+import Laboratory04.Problem43_47.MyStringList;
 
 public class Employee {
     private AccountList accounts; // Using AccountList instead of individual accounts

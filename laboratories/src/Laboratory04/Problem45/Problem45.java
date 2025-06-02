@@ -1,9 +1,9 @@
 package Laboratory04.Problem45;
 
-import Laboratory04.Problem4244.ClosedCurve.Polygon;
-import Laboratory04.Problem4244.ClosedCurve.Rectangle;
-import Laboratory04.Problem4244.ClosedCurve.Square;
-import Laboratory04.Problem4244.ClosedCurve.Triangle;
+import Laboratory04.Problem42_44.ClosedCurve.Polygon;
+import Laboratory04.Problem42_44.ClosedCurve.Rectangle;
+import Laboratory04.Problem42_44.ClosedCurve.Square;
+import Laboratory04.Problem42_44.ClosedCurve.Triangle;
 
 public class Problem45 {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package Laboratory04.Problem43;
+package Laboratory04.Problem43_47;
 
-import Laboratory04.Problem43.employeeinfo.Account;
-import Laboratory04.Problem43.employeeinfo.Employee;
+import Laboratory04.Problem43_47.employeeinfo.Account;
+import Laboratory04.Problem43_47.employeeinfo.Employee;
 
 import java.util.Scanner;
 

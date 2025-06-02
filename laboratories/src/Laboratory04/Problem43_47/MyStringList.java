@@ -1,51 +1,48 @@
-package Laboratory04.Problem43;
-
-import Laboratory04.Problem43.employeeinfo.Account;
+package Laboratory04.Problem43_47;
 
 import java.util.Arrays;
 
 /**
- * A custom list implementation to store Account objects.
+ * A custom list implementation to store String objects.
  * Does not use Java's built-in List classes.
- * Based on MyStringList.
  */
-public class AccountList {
+public class MyStringList {
     private static final int INITIAL_CAPACITY = 2; // Initial size of the array
-    private Account[] accArray;
+    private String[] strArray;
     private int size; // Number of actual elements in the list
 
-    public AccountList() {
-        accArray = new Account[INITIAL_CAPACITY];
+    public MyStringList() {
+        strArray = new String[INITIAL_CAPACITY];
         size = 0;
     }
 
     /**
-     * Adds an Account to the end of the list.
+     * Adds a String to the end of the list.
      * Resizes the internal array if necessary.
-     * @param acct The Account to add.
+     * @param s The String to add.
      */
-    public void add(Account acct) {
-        if (acct == null) {
+    public void add(String s) {
+        if (s == null) {
             return; // Or throw IllegalArgumentException
         }
-        if (size == accArray.length) {
+        if (size == strArray.length) {
             resize();
         }
-        accArray[size] = acct;
+        strArray[size] = s;
         size++;
     }
 
     /**
-     * Retrieves the Account at the specified index.
-     * @param i The index of the Account to retrieve.
-     * @return The Account at index i.
+     * Retrieves the String at the specified index.
+     * @param i The index of the String to retrieve.
+     * @return The String at index i.
      * @throws IndexOutOfBoundsException if the index is out of range.
      */
-    public Account get(int i) {
+    public String get(int i) {
         if (i < 0 || i >= size) {
             throw new IndexOutOfBoundsException("Index: " + i + ", Size: " + size);
         }
-        return accArray[i];
+        return strArray[i];
     }
 
     /**
@@ -68,14 +65,14 @@ public class AccountList {
      * Resizes the internal array to twice its current capacity.
      */
     private void resize() {
-        int newCapacity = accArray.length * 2;
-        accArray = Arrays.copyOf(accArray, newCapacity);
-        // System.out.println("AccountList resized to capacity: " + newCapacity);
+        int newCapacity = strArray.length * 2;
+        strArray = Arrays.copyOf(strArray, newCapacity);
+        // System.out.println("MyStringList resized to capacity: " + newCapacity);
     }
 
     /**
-     * Returns a string representation of the list of accounts.
-     * Calls toString() on each Account object.
+     * Returns a string representation of the list.
+     * Example: [Hello, World, Java]
      * @return String representation of the list.
      */
     @Override
@@ -83,14 +80,13 @@ public class AccountList {
         if (size == 0) {
             return "[]";
         }
-        StringBuilder sb = new StringBuilder("[\n");
-        for (int i = 0; i < size; i++) {
-            sb.append("  ").append(accArray[i].toString()); // Assuming Account has a decent toString()
-            if (i < size - 1) {
-                sb.append(",\n");
-            }
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < size - 1; i++) {
+            sb.append(strArray[i]);
+            sb.append(", ");
         }
-        sb.append("\n]");
+        sb.append(strArray[size - 1]);
+        sb.append("]");
         return sb.toString();
     }
 
@@ -102,17 +98,16 @@ public class AccountList {
      * @return the element that was removed from the list
      * @throws IndexOutOfBoundsException if the index is out of range
      */
-    public Account remove(int index) {
+    public String remove(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
-        Account removedElement = accArray[index];
+        String removedElement = strArray[index];
         for (int i = index; i < size - 1; i++) {
-            accArray[i] = accArray[i + 1];
+            strArray[i] = strArray[i + 1];
         }
-        accArray[size - 1] = null; // Clear the last element
+        strArray[size - 1] = null; // Clear the last element
         size--;
         return removedElement;
     }
 }
-
