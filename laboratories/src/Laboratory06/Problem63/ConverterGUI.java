@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class ConverterGUI {
     public static void main(String[] args) {
-        
+
         JFrame frame = new JFrame("Unit Converter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 200);
