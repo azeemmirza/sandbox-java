@@ -2,16 +2,11 @@ package Laboratory06.Problem63;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
 
 public class Problem63 extends JFrame {
     private JTextField inputField;
     private JTextField outputField;
     private JComboBox<String> converterBox;
-
-    private final Map<String, Function<Double, Double>> converters = new HashMap<>();
 
     public Problem63() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,22 +14,25 @@ public class Problem63 extends JFrame {
         setSize(500, 150);
         centerFrameOnDesktop(this);
 
+        // Initialize fields
         inputField = new JTextField(10);
         outputField = new JTextField(10);
         outputField.setEditable(false);
 
+        // Dropdown options
         String[] options = {
                 "Miles to Kilometers", "Kilometers to Miles",
                 "Pounds to Kilograms", "Kilograms to Pounds",
                 "Gallons to Liters", "Liters to Gallons",
                 "Fahrenheit to Celsius", "Celsius to Fahrenheit"
         };
+
         converterBox = new JComboBox<>(options);
-        setupConverters();
 
         JButton convertBtn = new JButton("Convert");
         convertBtn.addActionListener(e -> convert());
 
+        // Build GUI panel
         JPanel panel = new JPanel();
         panel.add(converterBox);
         panel.add(new JLabel("Input:"));
@@ -46,25 +44,45 @@ public class Problem63 extends JFrame {
         getContentPane().add(panel);
     }
 
-    private void setupConverters() {
-        converters.put("Miles to Kilometers", val -> val * 1.60934);
-        converters.put("Kilometers to Miles", val -> val / 1.60934);
-        converters.put("Pounds to Kilograms", val -> val * 0.453592);
-        converters.put("Kilograms to Pounds", val -> val / 0.453592);
-        converters.put("Gallons to Liters", val -> val * 3.78541);
-        converters.put("Liters to Gallons", val -> val / 3.78541);
-        converters.put("Fahrenheit to Celsius", val -> (val - 32) * 5 / 9);
-        converters.put("Celsius to Fahrenheit", val -> val * 9 / 5 + 32);
-    }
-
     private void convert() {
+        String selected = (String) converterBox.getSelectedItem();
         try {
             double input = Double.parseDouble(inputField.getText());
-            String selected = (String) converterBox.getSelectedItem();
-            double result = converters.get(selected).apply(input);
+            double result;
+
+            switch (selected) {
+                case "Miles to Kilometers":
+                    result = input * 1.60934;
+                    break;
+                case "Kilometers to Miles":
+                    result = input / 1.60934;
+                    break;
+                case "Pounds to Kilograms":
+                    result = input * 0.453592;
+                    break;
+                case "Kilograms to Pounds":
+                    result = input / 0.453592;
+                    break;
+                case "Gallons to Liters":
+                    result = input * 3.78541;
+                    break;
+                case "Liters to Gallons":
+                    result = input / 3.78541;
+                    break;
+                case "Fahrenheit to Celsius":
+                    result = (input - 32) * 5 / 9;
+                    break;
+                case "Celsius to Fahrenheit":
+                    result = input * 9 / 5 + 32;
+                    break;
+                default:
+                    outputField.setText("Unknown");
+                    return;
+            }
+
             outputField.setText(String.format("%.2f", result));
         } catch (NumberFormatException ex) {
-            outputField.setText("Invalid");
+            outputField.setText("Invalid input");
         }
     }
 
