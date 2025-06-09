@@ -5,6 +5,14 @@ public class SinglyLinkedList {
 	
 	void insert(String s, int pos) {
 		//implement
+		int size = size();
+		Node newNode = new Node();
+		newNode.data = s;
+
+
+
+
+
 	}
 	
 	/** size = the number of non-null nodes */
