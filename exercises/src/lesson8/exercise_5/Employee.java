@@ -3,6 +3,7 @@ package lesson8.exercise_5;
 public class Employee {
 	private String name;
 	private int salary;
+
 	public Employee(String name, int sal) {
 		this.name = name;
 		this.salary = sal;
@@ -10,9 +11,11 @@ public class Employee {
 	public String getName() {
 		return name;
 	}
+
 	public int getSalary() {
 		return salary;
 	}
+
 	@Override
 	public String toString() {
 		return name + ": " + salary;
