@@ -193,19 +193,37 @@ public class MyStringLinkedList {
 	}
 
 	public static void main(String[] args) {
+		var list = new MyStringLinkedList();
+		list.addLast("Rich");
+		System.out.println(list);
+		list.removeLast();
+		System.out.println(list);
+		list.addFirst("Bob");
+		list.addFirst("Harry");
+		list.addFirst("Steve");
+		System.out.println(list);
+		list.removeLast();
+		System.out.println(list);
+		System.out.println(list.search("Harry"));
+		System.out.println(list.search("Bob"));
+		list.addLast("Tom");
+		System.out.println(list);
+
 		String[] testArr = { "big", "small", "tall", "short", "round", "square", "enormous", "tiny", "gargantuan",
 				"lilliputian", "numberless", "none", "vast", "miniscule" };
 
-		MyStringLinkedList list = new MyStringLinkedList();
+		MyStringLinkedList list2 = new MyStringLinkedList();
 
 		for (String s : testArr) {
-			list.addLast(s);
+			list2.addLast(s);
 		}
 
+		list2.minSort();
 		list.minSort();
 
 		System.out.println("The list in sorted order:");
-		System.out.println(list.toString());
+		System.out.println(list);
+		System.out.println(list2);
 		System.out.println();
 	}
 }
