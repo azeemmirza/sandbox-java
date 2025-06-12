@@ -1,4 +1,4 @@
-package Problem101.employeebst;
+package Laboratory10.Problem101.employeebst;
 import java.util.Comparator;
 public class NameComparator implements Comparator<Employee> {
 	//compareTo in this case is not consistent with equals

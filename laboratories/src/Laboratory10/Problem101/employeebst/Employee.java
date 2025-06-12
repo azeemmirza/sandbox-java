@@ -1,4 +1,4 @@
-package Problem101.employeebst;
+package Laboratory10.Problem101.employeebst;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
