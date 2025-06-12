@@ -1,0 +1,8 @@
+Deletion in BST:
+ - Case I: Node to remove has no child (leaf node)
+ - Case II: Node to remove has one children
+ - Case III: Node to remove has two children
+
+
+-------------------
+
