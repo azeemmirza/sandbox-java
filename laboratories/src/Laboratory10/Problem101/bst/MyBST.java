@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MyBST<T> {
+public class MyBST {
 	/** The tree root. */
 	private Node root;
 
