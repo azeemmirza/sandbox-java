@@ -1,4 +1,4 @@
-package Laboratory10.Problem101.bst;
+package Problem101;
 
 import java.util.ArrayList;
 import java.util.Collections;
