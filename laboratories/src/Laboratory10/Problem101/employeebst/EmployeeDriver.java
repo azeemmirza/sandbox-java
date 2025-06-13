@@ -1,8 +1,8 @@
-package Laboratory10.Problem101.employeebst;
-import Laboratory10.Problem101.bst.EmployeeBST;
+package Problem101.employeebst;
+
+import Problem101.bst.EmployeeBST;
 
 public class EmployeeDriver {
-
 	public static void main(String[] args) {
 		new EmployeeDriver();
 

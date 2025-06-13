@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class MyHashtable implements Iterable {
+public class MyHashtable implements Iterable<Integer> {
 	private static final int INITIAL_SIZE;
 	private static final int DEFAULT_LOAD_FACTOR = 5;
 	static {
@@ -13,6 +13,7 @@ public class MyHashtable implements Iterable {
 	private int tableSize;
 	private int numEntries;
 	private int maxLoadFactor = DEFAULT_LOAD_FACTOR;
+	
 	//to create a collections framework using sets rather
 	//than lists, use open addressing implementation of
 	//hashtable here
@@ -34,13 +35,18 @@ public class MyHashtable implements Iterable {
 	 * otherwise
 	 */
 	public boolean containsKey(Object key){
-		if(key == null) return false;
+		if(key == null) {
+			return false;
+		}
+		
 		int index = hash(key.hashCode());
 		if(table[index] == null) return false;
+		
 		for(Iterator it = table[index].iterator(); it.hasNext();) {
 			Entry e = (Entry)it.next();
 			if(e.key.equals(key)) return true;
 		}
+		
 		return false;
 	}
 	
@@ -48,13 +54,16 @@ public class MyHashtable implements Iterable {
 		if(key==null) return;
 		int hashcode = key.hashCode();
 		int hash = hash(hashcode);
+		
 		//if key has already been used, update value in the Entry
 		Entry e = getEntry(key);
 		if (e != null) {
 			e.value = value;
 		}
+		
 		//if this key is new, create a new Entry and add to table
 		else {
+			
 			//put the value and the key into an Entry object
 			//which will be placed in the table in the
 			//slot (namely, hash)
