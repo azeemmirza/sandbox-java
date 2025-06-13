@@ -6,17 +6,28 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private HashMap salaryRecord;
-	
+	public Employee(){
+		salaryRecord = new HashMap<String,Double>();
+	}
+
 	public void addEntry(String date, double salary) {
-		//implement
+		salaryRecord.put(date, salary);
 	}
 	public void printPaymentAmount(String date) {
-		//implement
-		
+		if(!salaryRecord.containsKey(date))
+			System.out.println(getFirstName() +" did not receive a paycheck on  "+ date);
+		else
+			System.out.println(getFirstName() + " "+ getLastName()+" was paid " + salaryRecord.get(date) +" on " + date);
+
 	}
-	public void printAveragePaycheck() {
-		//implement
-	}
+	public void printAveragePaycheck(){
+		double average = 0.0;
+		for(Object key: salaryRecord.keySet()){
+			average += (double) salaryRecord.get(key);
+		}
+		average = average/salaryRecord.size();
+		System.out.println("Average paycheck for "+ getFirstName()+" " + getLastName() + " was " + average);
+		}
 	
 	public static void main(String[] args) {
 		Employee e = new Employee();
