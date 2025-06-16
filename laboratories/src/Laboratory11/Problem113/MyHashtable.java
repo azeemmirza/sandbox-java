@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+
 /**
  * A simple implementation of a hash table using separate chaining with LinkedLists.
  * Supports basic operations: put, get, remove, containsKey, and iteration over keys.
@@ -45,14 +46,21 @@ public class MyHashtable implements Iterable {
      * @return true if the key exists, false otherwise
      */
     public boolean containsKey(Object key) {
-        if (key == null) return false;
+        if (key == null){
+					return false;
+				}
+
         int index = hash(key.hashCode());
-        if (table[index] == null) return false;
+        
+				if (table[index] == null) {
+					return false;
+				}
 
         for (Object obj : table[index]) {
             Entry e = (Entry) obj;
             if (e.key.equals(key)) return true;
         }
+
         return false;
     }
 
@@ -68,10 +76,12 @@ public class MyHashtable implements Iterable {
 					for (Object obj : table[i]) {
 						Entry oldEntry = (Entry) obj;
 						int hash = Math.abs(oldEntry.key.hashCode() % newSize);
-						
+
+                        // No Collision
 						if (tableTemp[hash] == null) {
 							tableTemp[hash] = new LinkedList();
 						}
+
 						tableTemp[hash].add(oldEntry);
 					}
 				}
@@ -87,7 +97,9 @@ public class MyHashtable implements Iterable {
      * @param value the value
      */
     public void put(Object key, Object value) {
-        if (key == null) return;
+        if (key == null) {
+					return;
+				}
 				
 				if (loadFactor() >= maxLoadFactor) {
 					rehash();
@@ -275,5 +287,9 @@ public class MyHashtable implements Iterable {
 
         // Print final state
         System.out.println(h);
+
+        System.out.println("Table size: " + h.tableSize);
+        System.out.println("Number of entries: " + h.numEntries);
+        System.out.println("Load factor: " + h.loadFactor());
     }
 }

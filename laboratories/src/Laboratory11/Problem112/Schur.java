@@ -2,7 +2,6 @@ package Laboratory11.Problem112;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Schur {
     public boolean checkForSum(List<Integer> list, Integer z) {
