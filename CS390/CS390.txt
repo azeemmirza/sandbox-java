@@ -1,0 +1,21 @@
+Deletion in BST:
+ - Case I: Node to remove has no child (leaf node)
+ - Case II: Node to remove has one children
+ - Case III: Node to remove has two children
+
+
+-------------------
+
+Syllabus:
+1. Recursion
+2. Lists
+3. Stack & Queue
+4. Binary Search Tree
+5. HashTable
+6. Exceptions
+13. JDBC and File Systems
+
+Recursion:
+two cases need to matched in order to be recursive:
+1. Base case: the simplest form of the problem that can be solved directly.
+2. Recursive case: the problem can be broken down into smaller sub-problems that are similar to the original problem.
