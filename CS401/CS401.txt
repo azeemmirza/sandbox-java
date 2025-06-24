@@ -1,0 +1,12 @@
+06-23-2025:
+
+Exercise 1.1: REGISTER_FOR_CLASS
+
+    USE CASE 01: student requests the list of courses
+                 system provides the list of courses
+
+    USE CASE 02: student selects the course
+                 systems checks if the courses is not previously not selected, if not then get selected.
+
+
+
