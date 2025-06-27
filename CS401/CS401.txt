@@ -10,3 +10,9 @@ Exercise 1.1: REGISTER_FOR_CLASS
 
 
 
+
+06-25-2025:
+composition and inheritance:
+problems:
+ - inheritance is static relationship and it must be decided at object construction time which type
+  of person someone
