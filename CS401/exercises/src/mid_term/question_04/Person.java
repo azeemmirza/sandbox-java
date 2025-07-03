@@ -15,7 +15,11 @@ public class Person {
     this.vehicles = new ArrayList<Vehicle>();
   }
 
-  public void addVehicle(Vehicle vehicle) {
+  protected void addVehicle(Vehicle vehicle) {
     this.vehicles.add(vehicle);
+  }
+
+  public Vehicle[] getVehicles() {
+    return (Vehicle[]) vehicles.toArray();
   }
 }
