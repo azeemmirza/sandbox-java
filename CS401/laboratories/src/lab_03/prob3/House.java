@@ -1,19 +1,16 @@
-package lab_03.prob3;
+package Assignment3.labs.prob3;
 
 
+public non-sealed class House extends Property {
+    private double lotSize;
 
-public class House {
-	private double lotSize;
-	private Address address;
-	public Address getAddress() {
-		return address;
-	}
-	public House(Address address, double lotSize) {
-		this.address = address;
-		this.lotSize = lotSize;
-	}
+    public House(Address address, double lotSize) {
+        setAddress(address);
+        this.lotSize = lotSize;
+    }
 
-	public double computeRent(){
-		return 0.1 * lotSize;
-	}
+    @Override
+    public double computeRent() {
+        return 0.1 * lotSize;
+    }
 }

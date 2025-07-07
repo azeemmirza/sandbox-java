@@ -1,4 +1,4 @@
-package lab_03.prob3;
+package Assignment3.labs.prob3;
 
 
 public class Address {
