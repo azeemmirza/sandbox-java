@@ -1,0 +1,8 @@
+I. When the type D is a class?
+- If D is a class, Java does not allow it to extend both B and C, so the diamond problem is avoided by disallowing multiple class inheritance.
+
+
+
+II. When the type D is an interface?
+-If D is an interface (or implements multiple interfaces), and there’s a conflict in default methods, Java forces D to override the method and choose which one to use.
+This avoids ambiguity.
