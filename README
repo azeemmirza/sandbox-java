@@ -1,11 +1,10 @@
 SANDBOX JAVA
 
-This repository contains the laboratory assignments for the *Fundamentals of Programming Practices* course.
-Each assignment demonstrates various programming concepts, practices, and techniques covered throughout the course.
-The solutions and code for each lab exercise can be found in separate directories and files.
+This repository serves as a personal workspace for Java programming. It contains a collection of exercises, experiments, and exploratory code designed to reinforce core concepts, test new ideas, and practice different Java techniques. The contents span various levels of difficulty and are organized into individual directories and files for clarity.
 
+It is intended for self-learning, prototyping, and experimenting with Java language features, libraries, and problem-solving approaches.
 
 LICENSE:
 This repository is licensed under the MIT License. See the LICENSE file for details.
 
-Copyrights (c) 2025
+Copyright (c) 2025
