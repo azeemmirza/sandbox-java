@@ -1,0 +1,9 @@
+EXPLANATION:
+
+The false and true behavior happens due to the overridden equals() method in PersonWithJob,
+where symmetry is broken when comparing a subclass and superclass. The issue is resolved by using
+composition rather than inheritance so the equality logic is confined to each class’s domain.
+
+When you call `.equals()` of Person's instance, it will only check for if name field is equal for
+both of the objects. But when you will call `.equals()` from PersonWithJob's instance it will check'
+for both name and salary field, which makes p1 to p2 unequal/false and p2 to p1 as true.
