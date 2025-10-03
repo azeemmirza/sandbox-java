@@ -1,5 +1,4 @@
-06-23-2025:
-
+06/23/2025:
 Exercise 1.1: REGISTER_FOR_CLASS
 
     USE CASE 01: student requests the list of courses
@@ -10,12 +9,17 @@ Exercise 1.1: REGISTER_FOR_CLASS
 
 
 
-
-06-25-2025:
+-----
+06/25/2025:
 composition and inheritance:
 problems:
  - inheritance is static relationship and it must be decided at object construction time which type
 
+-----
+10/02/2025:
+Late binding vs early binding
 
-06-27-2025:
- - 
+static - on the class level not on object level
+       - belongs to the class
+       - static always look at the left side
+       -
