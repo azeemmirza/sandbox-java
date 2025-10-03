@@ -1,0 +1,22 @@
+classDiagram
+    Circle *-- Cylinder
+
+  namespace laboratories {
+    class Problem33 {
+      + main() void?
+    }
+
+
+
+    class Circle {
+      - radius : double?
+      + computeArea() double?
+    }
+
+    class Cylinder {
+      - height : double?
+      - base : Circle?
+      + computeVolume() double?
+      + getBaseRadius() double?
+    }
+  }
