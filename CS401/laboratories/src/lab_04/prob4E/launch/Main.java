@@ -1,6 +1,6 @@
 package lab_04.prob4E.launch;
 
-import Assignment4.prob4E.*;
+import lab_04.prob4E.*;
 
 import java.util.ArrayList;
 import java.util.List;
