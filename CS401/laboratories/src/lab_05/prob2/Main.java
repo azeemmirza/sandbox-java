@@ -8,6 +8,7 @@ public class Main {
                 new RedheadDuck(),
                 new RubberDuck(),
         };
+
         for(Duck d : ducks){
             System.out.println(d.getClass().getSimpleName()+ ":");
             d.display();

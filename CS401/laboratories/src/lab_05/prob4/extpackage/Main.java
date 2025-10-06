@@ -12,13 +12,13 @@ public class Main {
 
         Order order = CustOrderFactory.createOrder(customer, LocalDate.now());
 
-        order.addItem("Shirt");
-        order.addItem("Laptop");
+        order.addItem("Juice");
+        order.addItem("Mobile");
 
         order = CustOrderFactory.createOrder(customer, LocalDate.now());
 
-        order.addItem("Pants");
-        order.addItem("Knife set");
+        order.addItem("Knife");
+        order.addItem("Tea Set");
 
         System.out.println(customer.getOrders());
     }
