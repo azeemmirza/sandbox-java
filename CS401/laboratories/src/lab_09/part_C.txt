@@ -1,0 +1,6 @@
+PART C ANSWER:
+
+HashMap relies on both the equals() and hashCode() methods to identify duplicate keys.
+If hashCode() isn’t implemented correctly, two Employee objects that are logically equal may end up in separate hash
+buckets, causing them to be treated as distinct entries. That’s the reason the duplicate removal logic doesn’t work as
+expected.

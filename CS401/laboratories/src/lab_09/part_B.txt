@@ -1,0 +1,8 @@
+PART B ANSWER:
+
+The problem occurred because the equals method was overloaded instead of properly overridden, it was defined to take an
+Employee parameter instead of the required Object type from the Object class.
+
+Due to this mismatch, when expressions like e.equals(emp) or list.contains(e) were executed, Java invoked the default
+equals method from Object, which compares memory references rather than object content. Consequently, it failed to
+recognize duplicates correctly, returning false even when the field values were identical.
