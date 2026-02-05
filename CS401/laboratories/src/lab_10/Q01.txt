@@ -1,0 +1,37 @@
+QUESTION 01:
+
+(a) (i):
+Parameters: none
+Free Variables: s, t
+
+(a) (ii):
+Parameters: s, t (string variables)
+Free Variables: ignoreCase (method)
+
+(b) (i):
+() -> Math.random()
+
+(b) (ii):
+public class LambdaExample {
+    public static void main(String[] args) {
+        Supplier<Double> randomSupplier = () -> Math.random();
+        System.out.println("Random number: " + randomSupplier.get());
+    }
+}
+
+
+(b) (iii):
+public class InnerClass {
+    static class RandomSupplier implements Supplier<Double> {
+        @Override
+        public Double get() {
+            return Math.random();
+        }
+    }
+
+    public static void main(String[] args) {
+        Supplier<Double> randomSupplier = new RandomSupplier();
+        System.out.println("random number: " + randomSupplier.get());
+    }
+}
+

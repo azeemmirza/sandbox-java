@@ -1,0 +1,152 @@
+QUESTION 05:
+
+1. Assign lambda expressions to variables and express as method references
+	A. (Employee e) -> e.getName()
+		Function<Employee, String> getName1 = (Employee e) -> e.getName();
+		Function<Employee, String> getName2 = Employee::getName;
+
+	B. (Employee e, String s) -> e.setName(s)
+		BiConsumer<Employee, String> setName1 = (Employee e, String s) -> e.setName(s);
+		BiConsumer<Employee, String> setName2 = Employee::setName;
+
+	C. (String s1, String s2) -> s1.compareTo(s2)
+		BiFunction<String, String, Integer> compareStrings1 = (String s1, String s2) -> s1.compareTo(s2);
+		BiFunction<String, String, Integer> compareStrings2 = String::compareTo;
+
+	D. (Integer x, Integer y) -> Math.pow(x, y)
+		BiFunction<Integer, Integer, Double> power1 = (Integer x, Integer y) -> Math.pow(x, y);
+		BiFunction<Integer, Integer, Double> power2 = Math::pow;
+
+	E. (Apple a) -> a.getWeight()
+		Function<Apple, Double> getWeight1 = (Apple a) -> a.getWeight();
+		Function<Apple, Double> getWeight2 = Apple::getWeight;
+
+	F. (String x) -> Integer.parseInt(x)
+		Function<String, Integer> parse1 = (String x) -> Integer.parseInt(x);
+		Function<String, Integer> parse2 = Integer::parseInt;
+
+	G. EmployeeNameComparator comp = new EmployeeNameComparator(); (Employee e1, Employee e2) -> comp.compare(e1, e2)
+		EmployeeNameComparator comp = new EmployeeNameComparator();
+		Comparator<Employee> comparator1 = (Employee e1, Employee e2) -> comp.compare(e1, e2);
+		Comparator<Employee> comparator2 = comp::compare;
+
+2. Evaluator method
+	import java.util.function.*;
+	import java.util.Comparator;
+
+	public class Examples {
+
+		// Example from instructions
+		Function<String, String> toUpper1 = (String x) -> x.toUpperCase();
+		Function<String, String> toUpper2 = String::toUpperCase;
+
+		// A. Employee getName
+		Function<Employee, String> getName1 = (Employee e) -> e.getName();
+		Function<Employee, String> getName2 = Employee::getName;
+
+		// B. Employee setName
+		BiConsumer<Employee, String> setName1 = (Employee e, String s) -> e.setName(s);
+		BiConsumer<Employee, String> setName2 = Employee::setName;
+
+		// C. String compareTo
+		BiFunction<String, String, Integer> compareStrings1 = (String s1, String s2) -> s1.compareTo(s2);
+		BiFunction<String, String, Integer> compareStrings2 = String::compareTo;
+
+		// D. Math.pow
+		BiFunction<Integer, Integer, Double> power1 = (Integer x, Integer y) -> Math.pow(x, y);
+		BiFunction<Integer, Integer, Double> power2 = Math::pow;
+
+		// E. Apple getWeight
+		Function<Apple, Double> getWeight1 = (Apple a) -> a.getWeight();
+		Function<Apple, Double> getWeight2 = Apple::getWeight;
+
+		// F. Integer.parseInt
+		Function<String, Integer> parse1 = (String x) -> Integer.parseInt(x);
+		Function<String, Integer> parse2 = Integer::parseInt;
+
+		// G. EmployeeNameComparator
+		EmployeeNameComparator comp = new EmployeeNameComparator();
+		Comparator<Employee> comparator1 = (Employee e1, Employee e2) -> comp.compare(e1, e2);
+		Comparator<Employee> comparator2 = comp::compare;
+
+		void evaluator() {
+			// Example test
+			System.out.println("Example: " + toUpper2.apply("hello"));
+
+			// Test A: getName
+			Employee emp1 = new Employee("John Doe", 50000);
+			System.out.println("A. getName: " + getName2.apply(emp1));
+
+			// Test B: setName
+			Employee emp2 = new Employee("Jane Smith", 60000);
+			setName2.accept(emp2, "Jane Doe");
+			System.out.println("B. setName: " + emp2.getName());
+
+			// Test C: compareTo
+			String str1 = "apple";
+			String str2 = "banana";
+			System.out.println("C. compareTo: " + compareStrings2.apply(str1, str2));
+
+			// Test D: Math.pow
+			System.out.println("D. power: " + power2.apply(2, 3));
+
+			// Test E: getWeight
+			Apple apple = new Apple(0.5);
+			System.out.println("E. getWeight: " + getWeight2.apply(apple));
+
+			// Test F: parseInt
+			System.out.println("F. parseInt: " + parse2.apply("123"));
+
+			// Test G: comparator
+			Employee emp3 = new Employee("Alice Brown", 55000);
+			Employee emp4 = new Employee("Bob Green", 65000);
+			System.out.println("G. compare: " + comparator2.compare(emp3, emp4));
+		}
+
+		public static void main(String[] args) {
+			Examples example = new Examples();
+			example.evaluator();
+		}
+	}
+
+	// Supporting classes (if not already available)
+	class Employee {
+		private String name;
+		private double salary;
+
+		public Employee(String name, double salary) {
+			this.name = name;
+			this.salary = salary;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public double getSalary() {
+			return salary;
+		}
+	}
+
+	class Apple {
+		private double weight;
+
+		public Apple(double weight) {
+			this.weight = weight;
+		}
+
+		public double getWeight() {
+			return weight;
+		}
+	}
+
+	class EmployeeNameComparator implements Comparator<Employee> {
+		@Override
+		public int compare(Employee e1, Employee e2) {
+			return e1.getName().compareTo(e2.getName());
+		}
+	}

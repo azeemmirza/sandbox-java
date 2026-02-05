@@ -1,0 +1,6 @@
+PROBLEM 01 (A):
+    Compiler error occurs at List<Number> nums = ints;, where list of type Integer is being assigned to Number,
+    which is a parent Class of Integer.
+
+PROBLEM 01 (B):
+    Compiler error occurs at nums.add(3.14) because double cannot be converted to capture#1 of ? extends java.lang.Number

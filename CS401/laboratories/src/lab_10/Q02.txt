@@ -1,0 +1,63 @@
+QUESTION 02:
+
+A:
+public class EmployeeNameComparator implements Comparator<Employee> {
+    @Override
+    public int compare(Employee e1, Employee e2) {
+        int nameComparison = e1.name.compareTo(e2.name);
+
+        if (nameComparison != 0) {
+            return nameComparison;
+        }
+
+		if (e1.salary == e2.salary) return 0;
+		else if (e1.salary < e2.salary) return -1;
+		else return 1;
+	}
+}
+
+
+
+B:
+class EmployeeComparator implements Comparator<Employee> {
+    @Override
+    public int compare(Employee e1, Employee e2) {
+        if(method == SortMethod.BYNAME) {
+            int nameComp = e1.name.compareTo(e2.name);
+
+            if (nameComp != 0) { return nameComp; }
+
+			if(e1.salary == e2.salary) return 0;
+			else if(e1.salary < e2.salary) return -1;
+			else return 1;
+		} else {
+		    if (e1.salary == e2.salary) { return e1.name.compareTo(e2.name); }
+			else if(e1.salary < e2.salary) return -1;
+			else return 1;
+		}
+	}
+}
+
+C:
+public void sort(List<Employee> emps, SortMethod method) {
+		Collections.sort(emps, (e1, e2) -> {
+			if(method == SortMethod.BYNAME) {
+				int nameComp = e1.name.compareTo(e2.name);
+				if (nameComp != 0) {
+					return nameComp;
+				}
+				// If names are equal, compare by salary for consistency
+				if(e1.salary == e2.salary) return 0;
+				else if(e1.salary < e2.salary) return -1;
+				else return 1;
+			} else {
+				// Salary comparison
+				if(e1.salary == e2.salary) {
+					// If salaries equal, compare by name for consistency
+					return e1.name.compareTo(e2.name);
+				}
+				else if(e1.salary < e2.salary) return -1;
+				else return 1;
+			}
+		});
+	}
